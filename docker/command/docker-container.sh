@@ -3,6 +3,8 @@ docker container create --name nama-container namaimages:tag
 
 # port forwarding(meneruskan port container ke host) pakai --publish
 docker container create --name nama-container --publish port-host:port-container namaimages:tag
+#menjalankan container
+docker container start nama-container
 
 ### daftar perintah manage doker container
 ################################################################################
@@ -35,5 +37,18 @@ Commands:
 #################################################################################
 
 history >>>>
+#buat container dari image
 
 docker container create --name nginxsample --publish 8081:80 nginx:latest
+docker container create --name mongosample --publish 27017:27017 tcm1911/mongodb-i386
+
+#
+docker container start nginxsample
+docker container stop nginxsample
+
+#
+docker container exec -i -t mongosample /bin/bash
+
+docker container create --name apisample --publish 3000:3000 restfulapiexpressjs_api
+docker container create --name mongosample tcm1911/mongodb-i386  
+
