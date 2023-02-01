@@ -1,8 +1,8 @@
-#membuat container dari image
+#membuat container dari image optionnya 'create'
 docker container create --name nama-container namaimages:tag
 
-
-
+# port forwarding(meneruskan port container ke host) pakai --publish
+docker container create --name nama-container --publish port-host:port-container namaimages:tag
 
 ### daftar perintah manage doker container
 ################################################################################
@@ -33,3 +33,7 @@ Commands:
   update      Update configuration of one or more containers
   wait        Block until one or more containers stop, then print their exit codes
 #################################################################################
+
+history >>>>
+
+docker container create --name nginxsample --publish 8081:80 nginx:latest

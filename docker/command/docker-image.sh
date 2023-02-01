@@ -9,6 +9,7 @@ docker image rmi namaimages:tag
 
 
 # sub perintah dari docker image
+#########################################################################################
 sub-perintah:
   build       Build an image from a Dockerfile
   history     Show the history of an image
@@ -22,3 +23,8 @@ sub-perintah:
   rm          Remove one or more images
   save        Save one or more images to a tar archive (streamed to STDOUT by default)
   tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+########################################################################################
+#
+history>>>>>>
+
+docker image pull nginx:latest
